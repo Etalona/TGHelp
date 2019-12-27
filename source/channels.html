@@ -13,25 +13,47 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="container">
       <a href="#" class="logo">
         <img src="img/logo.png" width="640" height="114" alt="Логотип TGHelp">
       </a>
       <ul class="main-nav__list">
-        <li class="main-nav__item">Анализ каналов</li>
-        <li class="main-nav__item">Рекламные посты</li>
-        <li class="main-nav__item">Поиск по статьям</li>
-        <li class="main-nav__item">Аналитика ботов</li>
-        <li class="main-nav__item">Чистка каналов</li>
+        <li class="main-nav__item main-nav__item--analysis main-nav__item--current">
+          <a>Анализ каналов</a>
+        </li>
+        <li class="main-nav__item main-nav__item--advertising">
+          <a href="#">Рекламные посты</a>
+        </li>
+        <li class="main-nav__item main-nav__item--search">
+          <a href="#">Поиск по статьям</a>
+        </li>
+        <li class="main-nav__item main-nav__item--analytic">
+          <a href="#">Аналитика ботов</a>
+        </li>
+        <li class="main-nav__item main-nav__item--clean">
+          <a href="#">Чистка каналов</a>
+        </li>
       </ul>
+      <div class="top-user">
+        <ul class="top-user__list">
+          <li class="top-user__item top-user__item--question">
+            <a href="#">
+              <img src="img/question-icon.png" width="16" height="16">
+            </a>
+          </li>
+          <li class="top-user__item top-user__item--bell">
+            <a href="#">
+              <img src="img/bell-icon.png" width="14" height="16">
+            </a>
+          </li>
+          <li class="top-user__item top-user__item--photo">
+            <a href="#">
+              <img src="img/top-user.jpg" width="26" height="26">
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <div class="top-user">
-      <ul class="top-user__list">
-        <li class="top-user__item"></li>
-        <li class="top-user__item"></li>
-        <li class="top-user__item"></li>
-      </ul>
-    </div>
   </header>
   <main>
     <section class="search-channel">
@@ -354,19 +376,23 @@
     </section>
   </main>
   <footer class="page-footer">
-    <a href="#" class="logo">
-      <img src="" width="" height="" alt="Логотип TGHelp">
-    </a>
-    <div class="cooperation">
-      <b>По всем вопросам сотрудничества:</b>
-      <a href="#">
-        <img src="#">
-        @tg_assistant
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="img/logo.png" width="640" height="114" alt="Логотип TGHelp">
       </a>
-      <a href="#">
-        <img src="#">
-        @tg_help
-      </a>
+      <div class="cooperation">
+        <b class="cooperation__text">По всем вопросам сотрудничества:</b>
+        <div class="cooperation__links">
+          <a class="cooperation__link" href="#">
+            <img src="img/telegram-icon.png" width="33" height="33">
+            @tg_assistant
+          </a>
+          <a class="cooperation__link" href="#">
+            <img src="img/telegram-icon.png" width="33" height="33">
+            @tg_help
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 </body>

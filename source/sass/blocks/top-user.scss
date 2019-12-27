@@ -1,0 +1,34 @@
+.top-user {
+  flex-grow: 1;
+}
+.top-user__list {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  padding-right: 80px;
+  margin: 0;
+  list-style: none;
+}
+.top-user__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.top-user__item--question img {
+  padding-top: 2px;
+}
+
+.top-user__item--photo {
+  width: 26px;
+  height: 26px;
+  border: 2px solid;
+  border-color: #e66465;
+  & img {
+  border-radius: 50%;
+  }
+}
