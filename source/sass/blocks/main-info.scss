@@ -3,7 +3,6 @@
   margin-bottom: 10px;
 }
 .main-info__text-wrapper {
-
   display: flex;
   flex-direction: column;
   margin-left: 35px;
@@ -49,6 +48,9 @@
 .main-info__tg {
   color: #00a3ff;
   text-decoration: none;
+  &:hover {
+    color: #00629c;
+  }
 }
 .main-info__section {
   margin-top: 6px;

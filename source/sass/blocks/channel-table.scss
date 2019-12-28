@@ -10,9 +10,16 @@
   text-align: left;
   padding-left: 90px;
 }
-.channel-table__headline a {
+.channel-table__link {
   font-weight: 700;
   color: #00a3ff;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.channel-table__link--disabled {
+  color: #000000;
+  text-decoration: none;
 }
 .channel-table__headline-time {
   display: block;
