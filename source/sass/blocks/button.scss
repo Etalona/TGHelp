@@ -1,0 +1,24 @@
+.button {
+  align-self: flex-end;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: #109cf1;
+  border: none;
+  box-shadow: 0 4px 10px rgba(16, 156, 241, 0.24);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  &:hover {
+    background-color: #3289cb;
+  }
+}
+.button--table {
+  border: 1px solid #00a3ff;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #00a3ff;
+  cursor: pointer;
+}

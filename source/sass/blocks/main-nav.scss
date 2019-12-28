@@ -1,9 +1,6 @@
 .main-nav__list {
   align-self: stretch;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
   padding-left: 60px;
   list-style: none;
   font-size: 10px;
@@ -65,7 +62,7 @@
     width: 57px;
     height: 2px;
     background-color: #109cf1;
-    bottom: 0;
+    bottom: 3px;
     left: 9px;
   }
 

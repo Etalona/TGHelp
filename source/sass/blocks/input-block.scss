@@ -1,0 +1,13 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+  padding-right: 35px;
+  & label {
+    font-weight: 700;
+    margin-bottom: 11px;
+    letter-spacing: 0.01em;
+  }
+}
+.input-block--name {
+  width: 49%;
+}

@@ -1,0 +1,38 @@
+.channel-table {
+  width: 100%;
+}
+.channel-table__headline  {
+  height: 80px;
+  vertical-align: top;
+  text-align: center;
+}
+.channel-table__headline td:first-child {
+  text-align: left;
+  padding-left: 90px;
+}
+.channel-table__headline a {
+  font-weight: 700;
+  color: #00a3ff;
+}
+.channel-table__headline-time {
+  display: block;
+  color: #9fa2b4;
+  width: 67px;
+  padding-left: 15px;
+}
+.channel-table__numbers {
+  width: 100px;
+  text-align: center;
+  vertical-align: top;
+  font-weight: 500;
+  & p {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+.channel-table__plus {
+  color: #6fcf97;
+}
+.channel-table__minus {
+color: #f27a54;
+}

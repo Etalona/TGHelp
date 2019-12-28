@@ -1,0 +1,57 @@
+.main-info {
+  display: flex;
+  margin-bottom: 10px;
+}
+.main-info__text-wrapper {
+
+  display: flex;
+  flex-direction: column;
+  margin-left: 35px;
+}
+.main-info__photo {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+}
+.main-info__photo-check {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/check-mark.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: -3px;
+    right: -15px;
+  }
+}
+.main-info__photo-sale {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 33px;
+    height: 33px;
+    background-image: url("../img/sale-tag.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: -18px;
+  }
+}
+.main-info__name {
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.main-info__tg {
+  color: #00a3ff;
+  text-decoration: none;
+}
+.main-info__section {
+  margin-top: 6px;
+  font-size: 10px;
+  color: #3c444c;
+}
