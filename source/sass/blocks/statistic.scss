@@ -1,6 +1,7 @@
 .statistic {
   display: flex;
   max-height: 860px;
+  margin-bottom: 65px;
 }
 .statistic__head {
   font-size: 20px;
@@ -102,4 +103,49 @@
 }
 .statistic__refer {
   width: 302px;
+}
+.statistic__efficiency {
+  width: 100%;
+  font-weight: 500;
+  margin-bottom: 65px;
+}
+.statistic__efficiency-post {
+  width: 140px;
+}
+.statistic__link-head a {
+  display: block;
+  margin-bottom: 25px;
+}
+.main-info__name--only {
+  margin-top: 19px;
+}
+.statistic__number--mid {
+  padding-top: 10px;
+  text-align: center;
+}
+.statistic__link-mid {
+  text-align: center;
+}
+.statistic__left {
+  text-align: left;
+}
+.statistic__efficiency-period {
+  width: 280px;
+}
+.statistic__analytic {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 65px;
+  text-align: center;
+  font-weight: 500;
+  & td {
+    padding-bottom: 15px;
+  }
+  & tr td:first-child {
+    width: 250px;
+  }
+}
+.statistic__analytic  .statistic__bots {
+  padding-top: 25px;
+  padding-bottom: 40px;
 }

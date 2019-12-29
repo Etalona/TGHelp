@@ -1,0 +1,31 @@
+.report {
+  margin-top: 65px;
+  margin-bottom: 150px;
+}
+.report__date {
+  margin-bottom: 19px;
+}
+.report__link {
+  position: relative;
+  width: 538px;
+  & a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+}
+.report__papers {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 41px;
+    height: 41px;
+    border-left: 1px solid #00a3ff;
+    border-radius: 3px;
+    background-image: url("../img/papers.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+  }
+}
