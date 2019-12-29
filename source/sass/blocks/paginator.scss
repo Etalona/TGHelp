@@ -26,3 +26,25 @@
   background-color: #109cf1;
   color: #ffffff;
 }
+.paginator  .paginator__arrow {
+  background-image: url("../img/arrow-blue.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: none;
+  &:hover {
+    background-image: url("../img/arrow-white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.paginator .paginator__arrow--left:hover {
+  transform: rotate(180deg);
+  box-shadow: none;
+}
+.paginator .paginator__arrow--right {
+  transform: rotate(180deg);
+  box-shadow: none;
+  &:hover {
+    transform: rotate(360deg);
+  }
+}

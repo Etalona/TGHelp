@@ -57,3 +57,84 @@
   font-size: 10px;
   color: #3c444c;
 }
+.main-info--large {
+  font-weight: 700;
+}
+.main-info__photo--large {
+  width: 100px;
+  height: 100px;
+}
+.main-info__text-wrapper--large {
+  font-size: 15px;
+}
+.main-info__name--large {
+  font-size: 20px;
+}
+.main-info__follower {
+  position: relative;
+  padding-left: 18px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 17px;
+    background-image: url("../img/people-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -3px;
+    left: 0;
+  }
+}
+.main-info__follower--large {
+  margin-top: 8px;
+  margin-bottom: 5px;
+  padding-left: 27px;
+  &::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+.main-info__rates {
+  margin-top: 5px;
+  margin-bottom:0;
+}
+.main-info__star {
+  display: inline-block;
+  width: 13px;
+  height: 15px;
+  cursor: pointer;
+}
+.main-info__star--full {
+  background-image: url("../img/star-full.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-info__star--half {
+  background-image: url("../img/star-half.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-info__star--empty {
+  background-image: url("../img/star-empty.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-info__rate-sum {
+  margin-left: 10px;
+}
+.main-info__time {
+  margin: 0;
+  color: #3c444c;
+}
+.main-info__name--mini {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.main-info__mention {
+  margin: 0;
+}
+.main-info__text-wrapper--statistic {
+  margin-left: 15px;
+}

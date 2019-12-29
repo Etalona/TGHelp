@@ -1,0 +1,27 @@
+.main-summary__table {
+  width: 610px;
+  font-size: 16px;
+  text-align: center;
+}
+.main-summary__headline {
+  font-size: 20px;
+  font-weight: 700;
+  & p {
+    margin-top: -3px;
+    margin-bottom: 14px;
+  }
+}
+.main-summary__pointer {
+  margin: 0;
+  font-weight: 700;
+}
+.main-summary__number {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.main-summary__plus {
+  color: #6fcf97;
+}
+.main-summary__minus {
+  color: #f27a54;
+}
