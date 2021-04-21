@@ -64,6 +64,30 @@
         </div>
         <button class="button" type="button">Расширенный поиск</button>
       </div>
+      <div class="advanced-search__wrapper">
+        <div class="advanced-search__column">
+          <div class="input-block">
+            <label for="category">Категория</label>
+            <input class="input" id="category" placeholder="Ввести категорию">
+          </div>
+          <div class="input-block">
+            <label for="description">Описание</label>
+            <input class="input" id="description" placeholder="Ввести описание">
+          </div>
+          <div class="input-block">
+            <label for="type-channel">Тип канала</label>
+            <select class="input" id="type-channel">
+              <option>Выбрать тип канала</option>
+            </select>
+          </div>
+          <div class="input-block input-block--checkbox">
+            <input type="checkbox" class="input" id="verified">
+            <label for="verified">Только проверенные каналы</label>
+          </div>
+        </div>
+
+
+      </div>
       <div class="paginator">
         <ul class="paginator__list">
           <li class="paginator__item paginator__item--current">
@@ -94,7 +118,7 @@
             <a class="channel-table__link" href="#">Подписчики</a>
           </td>
           <td>
-            <a class="channel-table__link  channel-table__link--disabled" href="#">Прирост</a>
+            <a class="channel-table__link" href="#">Прирост</a>
             <span class="channel-table__headline-time">сегодня неделя</span>
           </td>
           <td>
@@ -112,355 +136,39 @@
             <a class="channel-table__link" href="#">Отзывы</a>
           </td>
         </tr>
-        <tr>
+        <tr v-for="channel in channels">
           <td class="main-info">
-            <div class="main-info__photo-check">
+            <div>
               <a href="#">
-                <img class="main-info__photo" src="img/user-1.jpg" width="55" height="55">
+                <img class="main-info__photo" :src="channel.realImg" width="55" height="55">
               </a>
             </div>
               <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
+              <p class="main-info__name">{{ channel.name }}</p>
+              <a class="main-info__tg" href="#">@{{ channel.username }}</a>
               <span class="main-info__section">Раздел канала</span>
             </div>
           </td>
           <td class="channel-table__numbers">
-            <p>1 586 954</p>
-            <button class="button--table" type="button">50 000 ₽</button>
+            <p>{{ channel.subscribers_count }}</p>
           </td>
           <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
+            <p class="channel-table__plus"></p>
+            <p class="channel-table__minus"></p>
           </td>
           <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
+            <p></p>
+            <p></p>
           </td>
           <td class="channel-table__numbers">
-            <p>3,5</p>
+            <p>{{ channel.er }}</p>
           </td>
           <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
+            <p></p>
+            <p></p>
           </td>
           <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div class="main-info__photo-sale">
-              <a href="#">
-                <img class="main-info__photo" src="img/user-2.jpg" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div>
-              <a href="#">
-                <img class="main-info__photo" src="img/user-3.jpg" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div>
-              <a href="#">
-                <img class="main-info__photo" src="img/user-1.jpg" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div>
-              <a href="#">
-                <img class="main-info__photo" src="img/user-4.jpg" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div>
-              <a href="#">
-                <img class="main-info__photo" src="img/user-5.png" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div>
-              <a href="#">
-                <img class="main-info__photo" src="img/user-6.jpg" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div>
-              <a href="#">
-                <img class="main-info__photo" src="img/user-7.jpg" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div>
-              <a href="#">
-                <img class="main-info__photo" src="img/user-8.jpg" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
-          </td>
-        </tr>
-        <tr>
-          <td class="main-info">
-            <div>
-              <a href="#">
-                <img class="main-info__photo" src="img/user-9.jpg" width="55" height="55">
-              </a>
-            </div>
-            <div class="main-info__text-wrapper">
-              <p class="main-info__name">Название канала</p>
-              <a class="main-info__tg" href="#">@ssilka_na_tg</a>
-              <span class="main-info__section">Раздел канала</span>
-            </div>
-          </td>
-          <td class="channel-table__numbers">
-            <p>1 586 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p class="channel-table__plus">+ 6 955</p>
-            <p class="channel-table__minus">- 56 954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>3,5</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>86 954</p>
-            <p>954</p>
-          </td>
-          <td class="channel-table__numbers">
-            <p>126</p>
+            <p></p>
           </td>
         </tr>
       </table>
@@ -505,5 +213,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/vue.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
