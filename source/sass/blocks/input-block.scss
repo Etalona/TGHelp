@@ -13,4 +13,45 @@
 }
 .input-block--checkbox {
   flex-direction: row;
+  & label {
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
+
+.checkbox__input + label {
+  position: relative;
+  padding-left: 35px;
+  padding-top: 3px;
+  padding-bottom: 15px;
+  padding-right: 0;
+  margin-bottom: 25px;
+  margin-top: 27px;
+}
+.checkbox__input + label::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 21px;
+  height: 20px;
+  background-repeat: no-repeat;
+  border: 1px solid #109CF1;
+  border-radius: 5px;
+}
+.checkbox__input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 17px;
+  height: 13px;
+  background-image: url("../img/checkbox-mark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox__input:hover + label::before {
+
+}
+
