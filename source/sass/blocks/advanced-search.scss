@@ -1,3 +1,7 @@
+.advanced-search__wrapper {
+  display: flex;
+  flex-direction: row;
+}
 .advanced-search__column {
   width: 312px;
   & .input-block {

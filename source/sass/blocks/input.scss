@@ -9,3 +9,19 @@
     font-size: 14px;
   }
 }
+.input--filter {
+  width: 86px;
+  margin-right: 15px;
+}
+.input-group {
+  display: flex;
+}
+.input-group-text {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #00A3FF;
+}
+.input-wrapper {
+  display: flex;
+}
