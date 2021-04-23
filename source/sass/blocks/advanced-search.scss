@@ -1,9 +1,9 @@
-.advanced-search__wrapper {
+.advanced-search-inputs {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .advanced-search__column {
-  width: 312px;
   & .input-block {
     margin-top: 20px;
   }
@@ -17,5 +17,6 @@
     background-size: 11px 6px;
     background-position: 246px 16px;
     height: 40px;
+    width: 277px;
   }
 }

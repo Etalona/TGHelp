@@ -1,0 +1,33 @@
+.buttons-search {
+  margin-top: 42px;
+  margin-bottom: 65px;
+}
+.buttons-wrapper {
+  display: flex;
+}
+.button-head {
+  font-weight: 700;
+
+  margin-bottom: 0;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  & p {
+    border: 1px solid #3C444C;
+    border-radius: 15px;
+    padding: 5px;
+    min-width: 53px;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 0;
+    margin-right: 7px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+.button-search-active,
+.button-container p:hover {
+  background-color: #3C444C;
+  color: #ffffff;
+}

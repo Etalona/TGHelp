@@ -1,4 +1,5 @@
 .input {
+  width: 260px;
   border: 1px solid #00a3ff;
   border-radius: 3px;
   padding-top: 12px;
@@ -11,17 +12,28 @@
 }
 .input--filter {
   width: 86px;
-  margin-right: 15px;
+  margin-right: 14px;
+  border-left: none;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .input-group {
   display: flex;
 }
 .input-group-text {
+  font-size: 14px;
+  font-weight: 500;
   display: block;
-  width: 38px;
-  height: 38px;
+  padding-top: 10px;
+  padding-left: 11px;
+  padding-right: 11px;
   border: 1px solid #00A3FF;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
 }
 .input-wrapper {
   display: flex;
+  & .input-group:nth-child(2) .input--filter {
+    margin-right: 0;
+  }
 }

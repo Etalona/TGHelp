@@ -1,7 +1,6 @@
 .input-block {
   display: flex;
   flex-direction: column;
-  padding-right: 35px;
   & label {
     font-weight: 700;
     margin-bottom: 11px;
@@ -15,7 +14,9 @@
   flex-direction: row;
   & label {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
   }
 }
 
@@ -51,7 +52,4 @@
   background-position: center;
 }
 
-.checkbox__input:hover + label::before {
-
-}
 
