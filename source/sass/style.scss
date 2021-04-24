@@ -7,16 +7,18 @@ body {
   color: #333333;
   margin: 0;
 }
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
-  padding:0 !important;
-  border:0 !important;
+  padding: 0 !important;
+  border: 0 !important;
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
 }
+
 @import "fonts";
 @import "blocks/container";
 @import "blocks/page-header";
@@ -41,3 +43,20 @@ body {
 @import "blocks/report";
 @import "blocks/advanced-search";
 @import "blocks/buttons-search";
+
+html,
+body {
+  height: 100%;
+}
+
+.table-layout {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+//
+//header,
+//footer {
+//  display: table-row !important;
+//  height: 1px;
+//}
